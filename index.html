@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Performance Dashboard</title>
+    <!-- Plotly.js CDN -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Dashboard</a>
+            <!-- <ul class="nav-links"> 
+                <li><a href="#charts-section">Charts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul> -->
+        </div>
+    </nav>
+    
+
+    <h1>Sales Performance Dashboard</h1>
+
+    <!-- File Upload Section -->
+    <div class="upload-container">
+        <input type="file" id="fileUpload" accept=".json" />
+        <button onclick="loadFile()">Upload Sales Data</button>
+        <div id="errorMessage"></div>
+    </div>
+
+    <div class="info-section">
+        <h2>About This Website</h2>
+        <p>
+            Welcome to the <strong>Sales Performance Dashboard</strong>. This platform is designed to analyze and visualize your sales data effectively. 
+            Upload your sales data in JSON format, and explore interactive charts, key performance indicators (KPIs), and insights 
+            to make informed business decisions. It's simple, intuitive, and tailored for businesses of all sizes.
+        </p>
+    </div>
+    
+
+    <!-- Dashboard Charts -->
+    <div class="chart-container">
+        <div class="chart" id="salesByRegion"></div>
+        <div class="chart" id="unitsSoldByItem"></div>
+    </div>
+
+    <div class="chart-container">
+        <div class="chart" id="totalSalesAmount"></div>
+        <div class="chart" id="avgSaleValuePerUnit"></div>
+    </div>
+
+    <div class="chart-container">
+        <div class="chart" id="salesByManager"></div>
+    </div>
+
+
+</body>
+
+</html>
